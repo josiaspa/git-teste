@@ -1,19 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Git</title>
+    <style>
+        body {
+            padding: 22px;
+            margin-bottom: 35px;
+            background-color: #fcfcfa;
+            border: solid 1px #e2e0d8;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        div.verseblock pre.content {
+            padding: 1em;
+            margin-bottom: 1em;
+            font-family: Courier, monospace !important;
+            line-height: 18px;
+            color: #4e443c;
+            word-wrap: break-word;
+            white-space: pre;
+            white-space: pre-wrap;
+            background-color: #e8e7dd;
+        }
+
+        h1 {
+            margin-bottom: 0.4em;
+            font-size: 36px;
+            line-height: 44px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            font-weight: normal;
+            color: #4e443c;
+            text-rendering: optimizelegibility;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-weight: bold;
+            line-height: 44px;
+            color: #f14e32;
+        }
+    </style>
+    <title>Curso Git</title>
 </head>
+
 <body>
-    <h1>Teste - Git</h1>
-    <p><b>Lipsum dolor</b>  sit amet consectetur, adipisicing elit. Consectetur debitis possimus laudantium suscipit illum rerum necessitatibus quae magni labore eligendi facilis id vitae aperiam officiis, ipsa quos deserunt, repellat ad.</p>
-    <h1>Teste - Git 2</h1>
-    <p><b>Lipsum dolor</b>  sit amet consectetur, adipisicing elit. Consectetur debitis possimus laudantium suscipit illum rerum necessitatibus quae magni labore eligendi facilis id vitae aperiam officiis, ipsa quos deserunt, repellat ad.</p>
-    <h1>Teste - Git 3</h1>
-    <p><b>Lipsum dolor</b>  sit amet consectetur, adipisicing elit. Consectetur debitis possimus laudantium suscipit illum rerum necessitatibus quae magni labore eligendi facilis id vitae aperiam officiis, ipsa quos deserunt, repellat ad.</p>
-    <h1>Teste - Git Branch</h1>
-    <p><b>Lipsum dolor</b>  sit amet consectetur, adipisicing elit. Consectetur debitis possimus laudantium suscipit illum rerum necessitatibus quae magni labore eligendi facilis id vitae aperiam officiis, ipsa quos deserunt, repellat ad.</p>
+    <h1>Curso Git</h1>
+    <p>O Git permite e incentiva você a ter várias ramificações locais que podem ser totalmente independentes umas das outras. A criação, mesclagem e exclusão dessas linhas de desenvolvimento leva segundos.</p>
+    
+    <h2>git-init</h2>
+    <p><b>git-init</b> - Cria um repositório Git vazio ou reinicializa um existente</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre class="content"><em>git init</em> [-q | --quiet] [--bare] [--template=&lt;template-directory&gt;]
+              [--separate-git-dir &lt;git-dir&gt;] [--object-format=&lt;format&gt;]
+              [-b &lt;branch-name&gt; | --initial-branch=&lt;branch-name&gt;]
+              [--shared[=&lt;permissions&gt;]] [&lt;directory&gt;]</pre>
+        </div>
+    </div>
+    <h2>git-add</h2>
+    <p><b>git-add</b> - Adiciona o conteúdo do arquivo ao índice</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre class="content"><em>git add</em> [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]
+              [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]] [--sparse]
+              [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]
+              [--chmod=(+|-)x] [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]]
+              [--] [&lt;pathspec&gt;…&ZeroWidthSpace;]
+            </pre>
+        </div>
+    </div>
+    <h2>git-commit</h2>
+    <p><b>git-commit</b> - Grava alterações no repositório</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre class="content"><em>git commit</em> [-a | --interactive | --patch] [-s] [-v] [-u&lt;mode&gt;] [--amend]
+               [--dry-run] [(-c | -C | --squash) &lt;commit&gt; | --fixup [(amend|reword):]&lt;commit&gt;)]
+               [-F &lt;file&gt; | -m &lt;msg&gt;] [--reset-author] [--allow-empty]
+               [--allow-empty-message] [--no-verify] [-e] [--author=&lt;author&gt;]
+               [--date=&lt;date&gt;] [--cleanup=&lt;mode&gt;] [--[no-]status]
+               [-i | -o] [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]]
+               [(--trailer &lt;token&gt;[(=|:)&lt;value&gt;])…&ZeroWidthSpace;] [-S[&lt;keyid&gt;]]
+               [--] [&lt;pathspec&gt;…&ZeroWidthSpace;]</pre>
+        </div>
+    </div>
+    <h2>git-status </h2>
+    <p><b>git-status </b> - Mostra o status da árvore de trabalho</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre
+                class="content"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git status</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [&lt;options&gt;…&ZeroWidthSpace;] [--] [&lt;pathspec&gt;…&ZeroWidthSpace;]</font></font></pre>
+        </div>
+    </div>
+    <h2>git-push </h2>
+    <p><b>git-push </b> - Atualiza referências remotas junto com objetos associados</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre class="content"><em>git push</em> [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=&lt;git-receive-pack&gt;]
+               [--repo=&lt;repository&gt;] [-f | --force] [-d | --delete] [--prune] [-v | --verbose]
+               [-u | --set-upstream] [-o &lt;string&gt; | --push-option=&lt;string&gt;]
+               [--[no-]signed|--signed=(true|false|if-asked)]
+               [--force-with-lease[=&lt;refname&gt;[:&lt;expect&gt;]] [--force-if-includes]]
+               [--no-verify] [&lt;repository&gt; [&lt;refspec&gt;…&ZeroWidthSpace;]]</pre>
+        </div>
+    </div>
+    <h2>git-log </h2>
+    <p><b>git-log </b> - Mostra logs de commit</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre
+                class="content"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git log</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [&lt;options&gt;] [&lt;revision-range&gt;] [[--] &lt;path&gt;…&ZeroWidthSpace;]</font></font></pre>
+        </div>
+    </div>
+    <h2>git-diff </h2>
+    <p><b>git-diff </b> - Mostra as mudanças entre commits, commit e árvore de trabalho, etc</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre
+                class="content"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git diff</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [&lt;options&gt;] [&lt;commit&gt;] [--] [&lt;path&gt;…&ZeroWidthSpace;]
+             </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git diff</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [&lt;options&gt;] --cached [--merge-base] [&lt;commit&gt;] [--] [ &lt;path&gt;…&ZeroWidthSpace;]
+             </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git diff</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [&lt;options&gt;] [--merge-base] &lt;commit&gt; [&lt;commit&gt;…&ZeroWidthSpace;] &lt;commit&gt; [--] [&lt;path&gt;…&ZeroWidthSpace;]
+             </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git diff</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [&lt;options&gt; ] &lt;commit&gt;…&ZeroWidthSpace;&lt;commit&gt; [--] [&lt;path&gt;…&ZeroWidthSpace;]
+             </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git diff</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [&lt;options&gt;] &lt;blob&gt; &lt;blob&gt;
+             </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git diff</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [&lt;options&gt;] --no-index [--] &lt; caminho&gt; &lt;caminho&gt;</font></font></pre>
+        </div>
+    </div>
+    <h2>git-checkout </h2>
+    <p><b>git-checkout </b> - Troque ramificações ou restaure os arquivos da árvore de trabalho</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre
+                class="content"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git checkout</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [-q] [-f] [-m] [&lt;branch&gt;]
+         </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git checkout</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [-q] [-f] [-m] --detach [&lt;branch&gt;]
+         </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git checkout</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [-q] [-f ] [-m] [--detach] &lt;commit&gt;
+         </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git checkout</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [-q] [-f] [-m] [[-b|-B|--orphan] &lt;new-branch&gt;] [&lt;start-point &gt;]
+         </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git checkout</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [-f|--ours|--theirs|-m|--conflict=&lt;style&gt;] [&lt;tree-ish&gt;] [--] &lt;pathspec&gt;…
+        </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&ZeroWidthSpace; git</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> checkout [-f|- -ours|--theirs|-m|--conflict=&lt;style&gt;] [&lt;tree-ish&gt;] --pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]
+         </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git checkout</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> (-p |--patch) [&lt;tree-ish&gt;] [--] [&lt;pathspec&gt;…&ZeroWidthSpace;]</font></font></pre>
+        </div>
+    </div>
+    <h2>git-branch</h2>
+    <p><b>git-branch</b> - Lista, cria ou exclui branches</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre
+                class="content"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git branch</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [--color[=&lt;quando&gt;] | </font><font style="vertical-align: inherit;">--no-color] [--show-current]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [-v [--abrev=&lt;n&gt; | </font><font style="vertical-align: inherit;">--sem abreviatura]]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [--coluna[=&lt;opções&gt;] | </font><font style="vertical-align: inherit;">--no-column] [--sort=&lt;chave&gt;]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [--merged [&lt;commit&gt;]] [--no-merged [&lt;commit&gt;]]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [--contém [&lt;commit&gt;]] [--no-contém [&lt;commit&gt;]]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [--points-at &lt;object&gt;] [--format=&lt;format&gt;]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [(-r | --remotos) | </font><font style="vertical-align: inherit;">(-a | --todos)]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [--list] [&lt;padrão&gt;…&ZeroWidthSpace;]</font></font><font></font>
+        <em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git branch</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [--track[=(direto|herdar)] | </font><font style="vertical-align: inherit;">--no-track] [-f] &lt;branchname&gt; [&lt;start-point&gt;]
+         </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git branch</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> (--set-upstream-to=&lt;upstream&gt; | -u &lt;upstream&gt;) [&lt;branchname&gt;]
+         </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git branch</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -- unset-upstream [&lt;branchname&gt;]
+         </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git branch</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> (-m | -M) [&lt;oldbranch&gt;] &lt;newbranch&gt;
+         </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git branch</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> (-c | -C) [&lt;oldbranch&gt;] &lt;newbranch&gt;
+         </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git branch</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> (-d | -D) ) [-r] &lt;branchname&gt;…
+        </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&ZeroWidthSpace; git</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> branch --edit-description [&lt;branchname&gt;]</font></font></pre>
+        </div>
+    </div>
+    <h2>git-pull </h2>
+    <p><b>git-pull </b> - Busca e integra com outro repositório ou uma ramificação local</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre
+                class="content"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git pull</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [&lt;options&gt;] [&lt;repository&gt; [&lt;refspec&gt;…&ZeroWidthSpace;]]</font></font></pre>
+        </div>
+    </div>
+    <h2>git-merge </h2>
+    <p><b>git-merge </b> - Junte dois ou mais históricos de desenvolvimento</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre
+                class="content"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git merge</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [--no-verify] [-s &lt;strategy&gt;] [-X &lt;strategy-option&gt;] [-S[&lt;keyid&gt;]]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [--[no-]allow-unrelated-histórias]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [--[no-]rerere-autoupdate] [-m &lt;msg&gt;] [-F &lt;arquivo&gt;]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [--to-name &lt;branch&gt;] [&lt;commit&gt;…&ZeroWidthSpace;]</font></font><font></font>
+        <em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git merge</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> (--continue | --abort | --quit)</font></font></pre>
+        </div>
+    </div>
+    <h2>git-rebase </h2>
+    <p><b>git-rebase </b> - Reaplica commits em cima de outra dica base</p>
+    <div class="sectionbody">
+        <div class="verseblock">
+            <pre class="content"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">git rebase</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> [-i | </font><font style="vertical-align: inherit;">--interactive] [&lt;opções&gt;] [--exec &lt;cmd&gt;] </font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            [--onto &lt;newbase&gt; | </font><font style="vertical-align: inherit;">--keep-base] [&lt;upstream&gt; [&lt;branch&gt;]] </font><em><font style="vertical-align: inherit;">git rebase</font></em><font style="vertical-align: inherit;"> [-i | </font><font style="vertical-align: inherit;">--interactive] [&lt;options&gt;] [--exec &lt;cmd&gt;] [--onto &lt;newbase&gt;] </font><font style="vertical-align: inherit;">
+            --root [&lt;branch&gt;] </font><em><font style="vertical-align: inherit;">git rebase</font></em><font style="vertical-align: inherit;"> (--continue | --skip | --abort | -- sair | --edit-todo | --show-current-patch)</font></font>
+        <em><font style="vertical-align: inherit;"></font></em><font style="vertical-align: inherit;"></font><font style="vertical-align: inherit;"></font>
+        <em><font style="vertical-align: inherit;"></font></em><font style="vertical-align: inherit;"></font></pre>
+        </div>
+    </div>
+    <!-- <h2>git-</h2>
+    <p><b>git-</b> - </p> -->
+
 </body>
+
 </html>
